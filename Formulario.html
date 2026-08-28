@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>Entre em contato</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+
+            body {
+
+                display: flex;
+                justify-content: center;
+                height: 100vh;
+                align-items: center;
+
+            }
+
+
+
+        }
+
+        form {
+
+            background-color: rgb(220, 245, 230);
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0;
+
+        }
+
+        label {
+
+            display: block;
+
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+
+        }
+
+        .radio,
+        .check {
+            width: 10%;
+        }
+
+        #botao {
+            padding: 5px;
+            background-color: rgb(0, 102, 255);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            border: none
+        }
+
+        #botao:hover {
+
+            background-color: rgb(79, 79, 221);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form id="Entre em Contato">
+
+        <h1>Formulário</h1>
+
+        <label for="nome">Nome:</label>
+
+
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+        <label for="Telefone">Idade:</label>
+        <input type="number" name="Telefone" id="Telefone">
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+        <label for="Duvida">Senha:</label>
+        <input type="Duvida" name="duvida" id="duvida">
+
+        <label for="">periodo:</label>
+        <input type="radio" name="periodo" class="radio" value="1">Manhã
+        <input type="radio" name="periodo" class="radio" value="2">Tarde
+        <input type="radio" name="periodo" class="radio" value="3">Noite
+
+
+    
+
+        <input type="submit" value="Enviar" id="botao">
+
+
+
+
+
+    </form>
+
+    <script>
+
+        let form = document.getElementById('formulario')
+
+
+        form.addEventListener('submit', function (event) {
+
+            let nome = document.getElementById('nome').value
+            // previne o comportamento padrão
+            event.preventDefault()
+
+            console.log("O FORM FOI ENVIADO!")
+
+            // alert("Seu formulario foi enviado com sucesso!")
+            alert(`Olá ${nome} seu formulario foi enviado com sucesso!`)
+
+            form.reset()
+
+
+
+
+            // valida se o usuario ja existe no banco
+            // se não, cadastra
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
