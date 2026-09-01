@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fale com Sonora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #f17d09, #000000);
+            /* Gradiente de fundo */
+            color: #F1BE90;
+            /* Cor do texto principal (bege claro) */
+            padding: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0
+            /* Centraliza os títulos */
+            
+
+
+        }
+
+          label {
+
+            display: block; }
+            
+
+            input {
+            margin-bottom: 10px;
+            width: 100%;}
+
+
+        h1 {
+            color: #FFFFFF;
+            /* Título em branco */
+            margin-bottom: 5px;
+            font-size: 2em;
+        }
+
+        h1 + p {
+            color: #F1BE90;
+            /* Subtítulo em bege */
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #FFFFFF;
+            /* Labels em branco */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="duvida"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 18px;
+            background-color: #582C00;
+            /* Fundo do input (marrom escuro) */
+            border: 2px solid #F1BE90;
+            /* Borda (bege) */
+            border-radius: 30px;
+            /* Arredondamento */
+            color: #F1BE90;
+            /* Texto do input (bege) */
+            font-size: 1em;
+            outline: none;
+        }
+
+        textarea {
+            height: 150px;
+            /* Altura para a dúvida */
+            resize: none;
+            /* Impede redimensionamento */
+            border-radius: 20px;
+        }
+
+        .check {
+            width: 10%;
+        }
+
+        #botao {
+            width: 100%;
+            padding: 15px;
+            background-color: #FFFF00;
+            /* Amarelo vibrante do botão */
+            border-radius: 30px;
+            color: rgb(5, 5, 5);
+            cursor: pointer;
+            border: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+       
+        #botao:hover  {
+            
+            
+            background-color: #FFFF00;
+            
+    
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #F1BE90;
+        }
+
+        footer img { 
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="Fale com Sonora">
+
+        <h1>Fale com Sonora</h1>
+        <p>Sugestões de musica, dúvidas ou parcerias-Manda pra gente.</p>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(11)99999-9999" required>
+        <label for="duvida">Duvida:</label>
+        <input type="text" name="duvida" id="duvida">
+
+
+        <input type="submit" value="Enviar" id="botao">
+
+        <footer>
+            <img src="LogoP"> <span>SONORA - Curso JavaScript</span>
+        </footer>
+
+    </form>
+
+    <script>
+
+         let form = document.getElementById('Fale com Sonora')
+
+
+        form.addEventListener('submit', function (event) {
+
+            let nome = document.getElementById('nome').value
+            // previne o comportamento padrão
+            event.preventDefault()
+
+            console.log("SUA SOLICITACAO FOI ENVIADA!")
+
+            // alert(" foi enviado com sucesso!")
+            alert(`Olá ${nome} sua solicitacao foi enviada com sucesso!`)
+
+            form.reset()
+
+
+
+            
+             })
+    </script>
+
+</body>
+
+</html>
