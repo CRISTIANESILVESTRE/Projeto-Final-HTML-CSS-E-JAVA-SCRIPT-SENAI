@@ -1,0 +1,434 @@
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===================== HEADER + HERO (topo do site) ===================== */
+/* Guilherme - Sem Alteração */
+
+.site {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(180deg,
+            #ff7800 0%,
+            #ff7800 30%,
+            #e86600 43%,
+            #a34200 62%,
+            #411d00 78%,
+            #000 100%);
+}
+
+header {
+    width: 100%;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ff7800;
+
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: opacity .2s;
+}
+
+nav a:hover {
+    opacity: .7;
+}
+
+.hero {
+    width: 84%;
+    max-width: 1200px;
+
+    min-height: 330px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 55px 30px 40px;
+}
+
+.hero-content {
+    width: 48%;
+}
+
+.hero-content h1 {
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: .9;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: -3px;
+}
+
+.hero-content p {
+    margin-top: 28px;
+
+    max-width: 390px;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, .9);
+}
+
+.hero-player {
+    width: 390px;
+    height: 265px;
+
+    background: #050505;
+
+    border-radius: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+.player-circle {
+    width: 135px;
+    height: 135px;
+
+    border: 5px solid #ff7800;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ff7800;
+
+    font-size: 78px;
+
+    line-height: 1;
+}
+
+@media (max-width: 550px) {
+
+    header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-player {
+        width: 100%;
+        height: 180px;
+    }
+
+    .player-circle {
+        width: 90px;
+        height: 90px;
+
+        font-size: 50px;
+    }
+}
+
+/* ===================== CARROSSEL / CARDS (playlists) ===================== */
+
+.carrossel-section {
+    background: transparent;
+    color: #f2ede4;
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#destaques {
+    color: #4fd1c5;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.carrossel-section h1 {
+    font-size: 40px;
+    margin: 10px 0 20px;
+    color: #f2ede4;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 45px;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel-track.arrastando {
+    cursor: grabbing;
+    transition: none;
+}
+
+.card {
+    flex: 0 0 100%;
+    padding: 10px;
+}
+
+@media (min-width: 700px) {
+    .card {
+        flex: 0 0 33.333%;
+    }
+}
+
+.card-inner {
+    background: #1e1811;
+    border: 1px solid #3a2f20;
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+}
+
+.note-icon {
+    color: #d9a441;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.tag {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.tag.lofi {
+    color: #4fd1c5;
+}
+
+.tag.rock {
+    color: #e05c5c;
+}
+
+.tag.pop {
+    color: #e05c9e;
+}
+
+.card h3 {
+    margin: 4px 0 10px;
+    font-size: 22px;
+    color: #f2ede4;
+}
+
+.card p {
+    color: #b8ac98;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1e1811;
+    border: 1px solid #3a2f20;
+    color: #f2ede4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.arrow:hover {
+    background: #3a2f20;
+}
+
+.arrow.prev {
+    left: 0;
+}
+
+.arrow.next {
+    right: 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3a2f20;
+    cursor: pointer;
+    border: none;
+}
+
+.dot.active {
+    background: #d9a441;
+}
+
+/* ===================== FORMULÁRIO (Fale com Sonora) ===================== */
+/* SEM ALTERAÇÃO */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f17d09, #000000);
+    color: #F1BE90;
+    padding: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0;
+    margin: 40px auto;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+h1 {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+h1+p {
+    color: #F1BE90;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="duvida"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    background-color: #582C00;
+    border: 2px solid #F1BE90;
+    border-radius: 30px;
+    color: #F1BE90;
+    font-size: 1em;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    border-radius: 20px;
+}
+
+.check {
+    width: 10%;
+}
+
+#botao {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFFF00;
+    border-radius: 30px;
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#botao:hover {
+    background-color: #FFFF00;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #F1BE90;
+}
+
+footer img {
+    height: 30px;
+    /* ajustes cris 01/09/2026  */
+}
