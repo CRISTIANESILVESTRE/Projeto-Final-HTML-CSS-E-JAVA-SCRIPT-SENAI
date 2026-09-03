@@ -15,15 +15,15 @@
 
         <header>
 
-            <div class="logo">
-                SONORA
+            <div>
+                <img class="logo" src="logo.png" alt="Logo Sonora">
             </div>
 
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Produtos</a>
+                <a href="index.html">Home</a>
+                <a href="">Produtos</a>
                 <a href="sobre.html">Sobre</a>
-                <a href="#">Contato</a>
+                <a href="">Contato</a>
             </nav>
 
         </header>
@@ -135,14 +135,70 @@
 
             <input type="submit" value="Enviar" id="botao">
 
-            <footer>
-                <img src="logo.png"> <span>SONORA - Curso JavaScript</span>
-            </footer>
+            <div id="logoform">
+                <img src="logo1.png"> <span>SONORA - Curso JavaScript</span>
+            </div>
 
         </form>
 
+        <section class="plans-section" id="planos">
+
+            <h2 class="plans-title">
+                Nossos planos
+            </h2>
+
+            <p class="plans-subtitle">
+                Escolha como quer curtir a Sonora
+            </p>
+
+            <div class="plans-grid">
+
+                <div class="plan-card">
+
+                    <h3>Gratuito</h3>
+
+                    <div class="plan-price">
+                        R$0 <span>/mês</span>
+                    </div>
+
+                    <ul>
+                        <li>Ouça músicas com anúncios</li>
+                        <li>Playlists limitadas</li>
+                        <li>Qualidade padrão de áudio</li>
+                    </ul>
+
+                    <a href="#contato" class="plan-btn">Começar grátis</a>
+
+                </div>
+
+
+                <div class="plan-card featured">
+
+                    <h3>Premium</h3>
+
+                    <div class="plan-price">
+                        R$19,90 <span>/mês</span>
+                    </div>
+
+                    <ul>
+                        <li>Sem anúncios</li>
+                        <li>Playlists ilimitadas</li>
+                        <li>Áudio em alta qualidade</li>
+                        <li>Ouça offline</li>
+                    </ul>
+
+                    <a href="#contato" class="plan-btn">Assinar Premium</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
     <!-- fim do .site -->
+
+    <footer id="contato">© 2026 Sonora · Projeto acadêmico</footer>
 
     <script src="script.js"></script>
 

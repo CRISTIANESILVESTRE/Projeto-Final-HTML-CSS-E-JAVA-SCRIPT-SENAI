@@ -7,7 +7,9 @@
 }
 
 /* ===================== HEADER + HERO (topo do site) ===================== */
-/* Guilherme - Sem Alteração */
+/* ATUALIZADO: header agora reflete a estrutura real do HTML
+   (.container.nav > .brand + .nav-links), corrigindo o alinhamento
+   logo-esquerda / menu-direita */
 
 .site {
     width: 100%;
@@ -36,9 +38,7 @@ header {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 900;
-    letter-spacing: 1px;
+    width: 50px;
 }
 
 nav {
@@ -339,6 +339,7 @@ body {
     background: linear-gradient(to bottom, #f17d09, #000000);
     color: #F1BE90;
     padding: 20px;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 form {
@@ -419,7 +420,7 @@ textarea {
 }
 
 /* Rodapé */
-footer {
+#logoform {
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -428,7 +429,133 @@ footer {
     color: #F1BE90;
 }
 
-footer img {
+#logoform img {
     height: 30px;
     /* ajustes cris 01/09/2026  */
+}
+
+
+/* Página SOBRE*/
+
+
+:root{
+    --orange:#ff7100;
+    --orange-2:#ff8a00;
+    --deep:#0a0a0a;
+    --card:#171717;
+    --muted:#cfcfcf;
+    --white:#fff;
+    --radius:12px;
+  }
+  
+
+.about-main{background:#000;min-height:calc(100vh - 58px)}
+.about-hero{padding:55px 0 25px;text-align:center}
+.about-hero h1{font-size:35px;text-transform:uppercase;line-height:1}
+.about-hero h1 span{color:var(--orange)}
+.about-hero p{max-width:700px;margin:15px auto 0;color:#cfcfcf;font-size:12px;line-height:1.6}
+.about-content{padding:15px 0 70px}
+.about-grid{display:grid;gap:18px}
+.about-card{
+  background:linear-gradient(135deg,#ff7100,#f05f00);
+  color:#fff;border-radius:0;padding:22px;
+  box-shadow:0 10px 25px #0006;
+}
+.about-card.dark{background:#171717}
+.about-card h2{font-size:18px;margin-bottom:12px}
+.about-card p{font-size:11px;line-height:1.7;color:#fff}
+.about-card ul{padding-left:18px;font-size:11px;line-height:2}
+.about-two{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+.creators{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.creator{background:#101010;border:1px solid #ffffff16;border-radius:10px;padding:12px}
+.creator strong{font-size:11px;color:var(--orange);display:block;margin-bottom:4px}
+.creator span{font-size:10px;color:#ddd}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#000;
+  color:#fff;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1100px,92%);margin:auto}
+
+
+/*====== PLANOS ==== */
+
+.fields{display:grid;gap:8px;margin:5px auto 30px;max-width:700px}
+.field{height:18px;background:#222;border-radius:99px}
+.field.orange{background:var(--orange)}
+.plans-section{
+  background:linear-gradient(180deg,#8e3a00 0%,#321800 62%,#000 100%);
+  padding:70px 20px 90px;
+  text-align:center;
+}
+.plans-title{font-size:32px;color:#fff;margin-bottom:8px}
+.plans-subtitle{font-size:14px;color:#f1be90;margin-bottom:40px}
+.plans-grid{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  max-width:800px;
+  margin:0 auto;
+}
+.plan-card{
+  background:#1a1a1a;
+  border:1px solid transparent;
+  border-radius:14px;
+  padding:30px;
+  width:280px;
+  text-align:left;
+  box-shadow:0 12px 28px #0006;
+}
+.plan-card.featured{
+  border-color:var(--orange);
+}
+.plan-card h3{
+  color:var(--orange);
+  font-size:18px;
+  margin-bottom:16px;
+}
+.plan-price{
+  font-size:34px;
+  font-weight:900;
+  color:#fff;
+  margin-bottom:20px;
+}
+.plan-price span{
+  font-size:14px;
+  font-weight:400;
+  color:#ccc;
+}
+.plan-card ul{
+  list-style:none;
+  margin-bottom:28px;
+}
+.plan-card li{
+  color:var(--orange);
+  font-size:13px;
+  line-height:2.1;
+}
+.plan-btn{
+  display:block;
+  text-align:center;
+  padding:13px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:14px;
+  background:#3a3a3a;
+  color:#fff;
+  transition:.2s;
+}
+.plan-btn:hover{
+  filter:brightness(1.15);
+}
+.plan-card.featured .plan-btn{
+  background:#FFFF00;
+  color:#111;
 }
